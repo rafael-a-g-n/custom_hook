@@ -1,29 +1,64 @@
-/* FetchData.css */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+body {
+  background-color: #0f0f23;
+  color: #e0e0e0;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.usefetch_heading {
+  text-align: center;
+  color: #00ffcc;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  padding: 20px 0;
+}
 
 .list_data_main {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.list_data {
+  background-color: #1a1a3a;
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+}
+
+.list_data:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+}
+
+.list_data h3 {
+  margin: 0 0 15px;
+  color: #00ffcc;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.list_data p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.list_data p strong {
+  color: #00ffcc;
+}
+
+@media (max-width: 768px) {
+  .list_data_main {
+    padding: 0 10px;
   }
-  .usefetch_heading{
-    text-align: center;
-  }
- .list_data {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .list_data h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .list_data p {
-    margin: 5px 0;
-  }
-  
+}
